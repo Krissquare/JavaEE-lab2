@@ -5,16 +5,16 @@
 <!--namespace绑定一个对应的DAO/Mapper接口,全限定名-->
 <mapper namespace="Mappers.OrderMapper">
     <!--接口中的方法,数据库操作对应于以下sql语句,返回结果要写全限定名-->
-    <select id="selectOrderById" resultType="Models.Order">
+    <select id="selectOrderById" parameterType="Integer">
         select * from orders where id = #{id}
     </select>
 
-    <insert id="insertNewOrder" parameterType="Object">
-
+    <insert netstat -aon|findstr "49157"id="insertNewOrder" parameterType="Models.Order">
+        insert into orders values (#{})
     </insert>
 
     <select id="selectAllOrderItems" parameterType="Integer">
-
+        select * from order_item where order_id = #{id}
     </select>
 
     <insert id="insertNewOrderItem" parameterType="Object">
