@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace绑定一个对应的DAO/Mapper接口,全限定名-->
+<mapper namespace="Mappers.OrderMapper">
+    <!--接口中的方法,数据库操作对应于以下sql语句,返回结果要写全限定名-->
+    <select id="selectOrderById" resultType="Models.Order">
+        select * from orders where id = #{id}
+    </select>
+
+    <insert id="insertNewOrder" parameterType="Object">
+
+    </insert>
+
+    <select id="selectAllOrderItems" parameterType="Integer">
+
+    </select>
+
+    <insert id="insertNewOrderItem" parameterType="Object">
+
+    </insert>
+
+</mapper>

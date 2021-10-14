@@ -1,4 +1,5 @@
-package POJO;
+package Models;
 
 public class GoodsSKU {
+
 }
