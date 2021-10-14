@@ -5,22 +5,22 @@ management:
         include: "*"
 
 server:
-  port: 8082
+  port: 8081
 
 spring:
   boot:
     admin:
       client:
-        url: http://localhost:8081
+        url: http://localhost:8083
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://172.16.0.129:3306/javaeelab?serverTimezone=GMT%2B8
+    url: jdbc:mysql://localhost:3306/javaee_lab?serverTimezone=GMT%2B8
     username: root
-    password:
+    password: krissquare
     type: com.alibaba.druid.pool.DruidDataSource
-    initialization-mode: always
-    schema: classpath:schema.sql
-    data: classpath:data.sql
+#    initialization-mode: always
+#    schema: classpath:schema.sql
+#    data: classpath:data.sql
     druid:
       #初始化时建立物理连接的个数
       initial-size: 3
